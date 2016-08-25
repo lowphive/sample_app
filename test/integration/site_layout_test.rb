@@ -11,5 +11,10 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", contact_path
     get contact_path
     assert_select "title", full_title("Contact")
+# Next two lines aren't "strictly" in the guide
+    get signup_path
+    assert_template 'users/new'
+    assert_select "a[href=?]", signup_path
+    assert_select "title", full_title("Sign Up")
   end
 end
