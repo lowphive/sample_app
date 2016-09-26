@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
+# deleted book-recommended versions of bootstrap-sass and sass-rails, were
+# causing some error
+
 gem 'rails',                        '5.0.0'
-gem 'bootstrap-sass'#,               '3.3.6'
+gem 'bcrypt',                       '3.1.11'
+gem 'bootstrap-sass'
 gem 'puma',                         '3.4.0'
-gem 'sass-rails'#,                   '5.0.5'
+gem 'sass-rails'
 gem 'uglifier',                     '3.0.0'
 gem 'coffee-rails',                 '4.2.1'
 gem 'jquery-rails',                 '4.1.1'

@@ -1,9 +1,41 @@
 <div class="center jumbotron">
+<!-- Below is not standard for the hartl tutorial -->
+  <script>
+    alert('Hello ya hoser.')
+  </script>
+
+  <script> 
+    var nIntervId;
+
+    function changeColor() {
+      nIntervId = setInterval(flashText, 100);
+    }
+
+    function flashText() {
+      var oElem = document.getElementById("my_box");
+      oElem.style.color = oElem.style.color == "red" ? "green" : "red";
+    }
+
+    function stopTextColor() {
+      clearInterval(nIntervId);
+    }
+  </script>
+<!-- End of non standard for a second -->
   <h1>Animated gifs work with Ruby!</h1>
   <h2>
     This is the home page for the
     <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
     sample application.
+<!-- A little more non standard -->
+  <body onload="changeColor();">
+  <div id="my_box">
+    <p>Karma Chameleon! (Spelt wrong)</p>
+  </div>
+
+  <button onclick="stopTextColor();">Stop</button>
+  <button onclick="changeColor();">Start</button>
+  </body>
+<!-- End of non standard -->
   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
